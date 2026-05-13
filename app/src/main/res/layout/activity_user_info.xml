@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/user_profile_pic"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/txtUserInfoHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="User Info"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="32sp"
+        android:textColor="#002368" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/user_block_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name: "
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_bold"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/displayUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sashii"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_bold"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/displayEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sashii@gmail.com"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btnEditProfile"
+                android:layout_width="112dp"
+                android:layout_height="48dp"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:backgroundTint="#002368"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/btnSignOut"
+                android:layout_width="112dp"
+                android:layout_height="48dp"
+                android:text="Sign-out"
+                android:textAllCaps="false"
+                android:backgroundTint="#002368"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtAboutDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_regular"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:backgroundTint="#002368"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/roboto_bold" />
+
+</LinearLayout>

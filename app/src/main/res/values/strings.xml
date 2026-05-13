@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DailyDone</string>
+    <string name="splash_tagline">Plan. Finish. Succeed.</string>
+
+    <string name="sign_in_title">Sign in</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="btn_sign_in">Sign-in</string>
+    <string name="sign_up_link">Don\'t have an account? Sign Up</string>
+
+    <string name="create_account_title">Create Account</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="email_label">Email</string>
+    <string name="btn_signup">Signup</string>
+</resources>
