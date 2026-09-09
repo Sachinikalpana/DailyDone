@@ -1,11 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Background Image Layer -->
+    <ImageView
+        android:id="@+id/mainBgImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/main_bg"
+        android:scaleType="centerCrop"
+        android:alpha="0.75"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top Header Title -->
     <TextView
         android:id="@+id/txtDailyDone"
         android:layout_width="wrap_content"
@@ -15,9 +31,12 @@
         android:text="DailyDone"
         android:textStyle="bold"
         android:textSize="16sp"
+        android:textColor="#001A4D"
+        tools:ignore="HardcodedText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- User Profile Avatar -->
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImg"
         android:layout_width="48dp"
@@ -25,9 +44,11 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:src="@drawable/user_profile_pic"
+        android:contentDescription="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Section Heading -->
     <TextView
         android:id="@+id/txtMyTasks"
         android:layout_width="wrap_content"
@@ -39,9 +60,11 @@
         android:fontFamily="@font/roboto_bold"
         android:textSize="24sp"
         android:textStyle="bold"
+        tools:ignore="HardcodedText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDailyDone" />
 
+    <!-- Task List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tasksRecyclerView"
         android:layout_width="match_parent"
@@ -50,6 +73,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMyTasks" />
 
+    <!-- Add Task FAB -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
@@ -57,6 +81,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:src="@drawable/ic_add"
+        android:contentDescription="Add Task"
+        tools:ignore="HardcodedText"
         app:backgroundTint="#FFFFFF"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
